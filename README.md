@@ -1,3 +1,3 @@
 # hello-angularjs
 
-TEST
+https://sizucca.github.io/hello-angularjs/
