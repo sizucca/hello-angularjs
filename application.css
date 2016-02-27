@@ -1,0 +1,149 @@
+@charset 'utf-8';
+
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 10px 20px;
+  color: #4e4d47;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: Lato,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",Arial,sans-serif;
+  letter-spacing: .05em;
+  line-height: 1.6;
+  background-color: #ffffff;
+  -webkit-text-size-adjust: 100%;
+}
+body input,
+body button,
+body select,
+body textarea {
+  font-size: 1.4rem;
+  font-family: Lato,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",Arial,sans-serif;
+}
+a {
+  color: #4183c4;
+  text-decoration: underline;
+  -webkit-transition: .4s cubic-bezier(0,0,.2,1);
+  -moz-transition: .4s cubic-bezier(0,0,.2,1);
+  transition: .4s cubic-bezier(0,0,.2,1)
+}
+a:active,
+a:hover {
+  color: #cf4074;
+}
+
+/* c-textfield */
+.c-textfield {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  outline: 0;
+  padding: 0.6rem;
+  border: 1px solid #c1c4c5;
+  border-radius: 4px;
+  /*width: 100%;*/
+  height: 2.5em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 2px rgba(51,59,63,0.1) inset;
+  box-shadow: 0 1px 2px rgba(51,59,63,0.1) inset;
+  font-size: 109%;
+  vertical-align: middle;
+  background-color: #ffffff;
+}
+.c-textfield:focus {
+  -webkit-box-shadow: 0 1px 2px #fdf6d6 inset;
+  box-shadow: 0 1px 2px #fdf6d6 inset;
+  background-color: #fefbec;
+}
+.c-textfield[disabled="disabled"] {
+  cursor: default;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #eaebeb;
+}
+.c-textfield--title {
+  width: 50rem;
+}
+.c-textfield--email {
+  width: 20rem;
+}
+.c-textfield--textarea {
+  width: 50rem;
+  height: 10rem;
+}
+/* c-list */
+.c-list dt {
+  margin: 0 0 0.3rem;
+  padding: 0;
+}
+.c-list dd {
+  margin: 0 0 2rem;
+  padding: 0;
+}
+/* c-confirm */
+.c-confirm {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.c-confirm dt {
+  margin: 0 0 0.3rem;
+  padding: 0;
+}
+.c-confirm dd {
+  margin: 0 0 2rem;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+/* c-btn */
+.c-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.6rem 2rem;
+  border: 1px solid transparent;
+  border-bottom: 2px solid rgba(51,59,63,0.3);
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.2) inset;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.2) inset;
+  color: #ffffff;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.4;
+  background-color: #2a65a0;
+}
+.c-btn:hover {
+  background-color: #347dc7;
+}
+.c-btn.is-disabled,
+.c-btn[disabled] {
+  cursor: default;
+  border: 1px solid transparent;
+  border-bottom: 2px solid rgba(51,59,63,0.05);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: none;
+  background-color: #cbd6e3;
+}
+.mail-btn button {
+  width: 10em;
+}
+.mail-btn-clear button {
+  width: 15em;
+  background-color: #999999;
+}
+.mail-btn-clear button:hover {
+  background-color: #aaaaaa;
+}

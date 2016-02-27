@@ -1,0 +1,51 @@
+<div ng-if="!app.confirm.submit">
+  <form name="mailForm" novalidate>
+    <dl class="c-list">
+      <dt>タイトル</dt>
+      <dd>
+        <input class="c-textfield c-textfield--title" type="text" name="title" ng-model="app.mail.title" placeholder="タイトル" required>
+        <span class="invalid" ng-show="mailForm.title.$invalid">必須だよ</span>
+      </dd>
+      <dt>メールアドレス</dt>
+      <dd>
+        <input class="c-textfield c-textfield--email" type="email" name="email" ng-model="app.mail.email" placeholder="mail@exsample.com">
+        <span class="invalid" ng-show="mailForm.email.$invalid">書式がおかしいよ</span>
+      </dd>
+      <dt>内容</dt>
+      <dd>
+        <textarea class="c-textfield c-textfield--textarea" name="contents" ng-model="app.mail.contents" placeholder="お問い合わせ内容" required></textarea>
+        <span class="invalid" ng-show="mailForm.contents.$invalid">必須だよ</span>
+      </dd>
+    </dl>
+    <p class="mail-btn">
+      <button class="c-btn" ng-click="app.clickButton()" ng-disabled="mailForm.$invalid">送信</button>
+      <span class="invalid" ng-show="mailForm.$invalid">なにかおかしいから送信できないよ</span>
+    </p>
+  </form>
+</div>
+
+<div ng-if="app.confirm.submit">
+  <p>確認画面</p>
+  <dl class="c-confirm">
+    <dt>タイトル</dt>
+    <dd>{{app.confirm.title}}</dd>
+    <dt ng-if="app.confirm.email">メールアドレス</dt>
+    <dd ng-if="app.confirm.email">{{app.confirm.email}}</dd>
+    <dt>内容</dt>
+    <dd>{{app.confirm.contents}}</dd>
+    <dt>送信日時</dt>
+    <dd>{{app.confirm.date | date: 'yyyy/MM/dd HH:mm:ss'}}</dd>
+  </dl>
+  <p class="mail-btn-clear">
+    <button class="c-btn" ng-click="app.clickButtonClear()">なかった事にする</button>
+  </p>
+</div>
+
+<div ng-if="false">
+<hr>
+{{mailForm}}
+
+<p ng-controller="mail2 as app2">
+  {{app2.hello}}
+</p>
+</div>
